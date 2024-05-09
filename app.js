@@ -68,16 +68,11 @@ function takeCommand(message) {
         window.open('https://www.spotify.com/in/', "_blank");
         speak("Playing music");
     } else if (message.includes("calculator")) {
-        // Check if the device is a mobile or laptop
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            // If it's a mobile device, open WhatsApp
-            window.open('https://web.whatsapp.com/', "_blank");
-            speak("Opening WhatsApp");
-        } else {
-            // If it's a laptop, open the calculator
+        
+         
             window.open('Calculator:///', "_blank");
             speak("Opening Calculator");
-        }
+        
     } else if (message.includes("temperature") || message.includes("weather")) {
         window.open("https://www.windy.com/-Temperature-temp?temp,21.997,79.001,5", "_blank");
         speak("Showing weather");

@@ -72,11 +72,11 @@ else if(message.includes("play music")){
    window.open('https://www.spotify.com/in/',"_blank");
    speak("Playing music");
 }else if(message.includes("calculator")){
-   window.open('Calculator:///C:/Windows/System32/calc.exe',"_blank");
+   window.open('Calculator:///',"_blank");
    speak("Opening Calculator");
 }else if(message.includes("temperature")|| message.includes("weather")){
    window.open("https://www.windy.com/-Temperature-temp?temp,21.997,79.001,5","_blank");
-   speak("Opening weather");
+   speak("showing weather");
 
 }else if(message.includes("open laptop settings")){
    window.open("ms-settings:","_blank");

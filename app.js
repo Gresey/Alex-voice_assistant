@@ -1,5 +1,8 @@
 const btn = document.querySelector('.talk');
 const content = document.querySelector('.content');
+const nameofuser=document.getElementById('username');
+const password=document.getElementById('password');
+const submitButton = document.getElementById('submitbutton');
 
 function speak(text) {                         // speak the text
     const text_speak = new SpeechSynthesisUtterance(text);
@@ -23,7 +26,7 @@ function wishMe() {                           // wish the user according to the 
     }
 }
 window.addEventListener('load', () => {         //on load of the page
-    speak("I am alex");
+    //speak("I am alex");
     wishMe();
 });
 
@@ -79,7 +82,26 @@ function takeCommand(message) {
     } else if (message.includes("open laptop settings")) {
         window.open("ms-settings:", "_blank");
         speak("Opening settings");
-    }  else {
+    }else if(message.includes('log in')){
+        window.location.href = "login.html";
+        recognition.start();
+    } else if(message.includes('enter my name')){
+        nameofuser.value="Gresey";
+        nameofuser.textContent="Gresey";
+    }else if(message.includes('enter password')){
+      password.value="1234";
+    }else if(message.includes('submit')){
+        submitButton.click(); 
+            onsubmit();
+        
+    } 
+     else {
         speak("Sorry, I didn't get that. Please try again.")
     }
 }
+
+submitButton.addEventListener('click', () => {
+    console.log("Username:", nameofuser.value);
+    console.log("Password:", password.value);
+    
+});

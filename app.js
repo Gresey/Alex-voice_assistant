@@ -26,7 +26,7 @@ function wishMe() {                           // wish the user according to the 
     }
 }
 window.addEventListener('load', () => {         //on load of the page
-    //speak("I am alex");
+    speak("I am alex");
     wishMe();
 });
 
@@ -82,7 +82,7 @@ function takeCommand(message) {
     } else if (message.includes("open laptop settings")) {
         window.open("ms-settings:", "_blank");
         speak("Opening settings");
-    }else if(message.includes('log in')){
+    }else if(message.includes('login')){
         window.location.href = "login.html";
         recognition.start();
     } else if(message.includes('enter my name')){
